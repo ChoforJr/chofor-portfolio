@@ -1,8 +1,8 @@
 import App from "./App Components/App";
 import HomePage from "./HomePage Components/HomePage";
-import { PeopleChats, GroupChats } from "./Chats Components/Chats";
-import { ExplorePeople, ExploreGroups } from "./Explore Components/Explore";
-import Account from "./Account Components/Account";
+import Contacts from "./Contacts Components/Contacts";
+import Projects from "./Projects Components/Projects";
+import Skills from "./Skills Components/Skills";
 import ErrorPage from "./ErrorPage";
 
 const routes = [
@@ -16,11 +16,9 @@ const routes = [
         index: true,
         element: <HomePage />,
       },
-      { path: "chats/people", element: <PeopleChats /> },
-      { path: "chats/groups", element: <GroupChats /> },
-      { path: "explore/people", element: <ExplorePeople /> },
-      { path: "explore/groups", element: <ExploreGroups /> },
-      { path: "account", element: <Account /> },
+      { path: "project", element: <Projects /> },
+      { path: "skills", element: <Skills /> },
+      { path: "contacts", element: <Contacts /> },
     ],
   },
 ];
