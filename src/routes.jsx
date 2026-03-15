@@ -16,7 +16,7 @@ const routes = [
         index: true,
         element: <HomePage />,
       },
-      { path: "project", element: <Projects /> },
+      { path: "projects", element: <Projects /> },
       { path: "skills", element: <Skills /> },
       { path: "contacts", element: <Contacts /> },
     ],

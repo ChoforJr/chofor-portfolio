@@ -11,24 +11,24 @@ const App = () => {
       <nav>
         <h1>
           <Link to="/">
-            <span style={{ color: "#EE204D" }}>Dev</span>Chofor
+            Chofor's <span style={{ color: "#DA291C" }}>Portfolio</span>
           </Link>
         </h1>
         <section>
-          <Link to="/project">Projects</Link>
+          <Link to="/projects">Projects</Link>
           <Link to="/skills">Skills</Link>
           <Link to="/contacts">Contacts</Link>
         </section>
       </nav>
       <>
         <main>
-          <ItemContext.Provider>
+          <ItemContext.Provider value={null}>
             <Outlet />
           </ItemContext.Provider>
         </main>
       </>
       <footer>
-        <p>© {new Date().getFullYear()} — Built with React.js</p>
+        <p>© {new Date().getFullYear()} — Built with React.js & Vanilla CSS</p>
       </footer>
     </div>
   );

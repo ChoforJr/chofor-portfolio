@@ -1,10 +1,55 @@
 import styles from "./skills.module.css";
-// import { useState, useContext } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { ItemContext } from "../ItemContext";
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    skills: [
+      "React",
+      "lucide-react",
+      "Vitest",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Jest",
+    ],
+  },
+  {
+    title: "Backend",
+    skills: ["Node.js", "Express", "PostgreSQL", "SQL", "Prisma ORM"],
+  },
+  {
+    title: "Tools & Systems",
+    skills: [
+      "Git",
+      "Github",
+      "Linux / CLI",
+      "VS Code",
+      "Postman",
+      "Vercel",
+      "Neon",
+      "Render",
+    ],
+  },
+];
 
 const Skills = () => {
-  return <div className={styles.signIn}></div>;
+  return (
+    <div className={styles.skills}>
+      <h1>Technical Stack</h1>
+      <section>
+        {skillCategories.map((category) => (
+          <div key={category.title} className={styles.skillCard}>
+            <h2>{category.title}</h2>
+            <ul>
+              {category.skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
 };
 
 export default Skills;
