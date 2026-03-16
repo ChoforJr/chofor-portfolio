@@ -1,5 +1,5 @@
 .contacts {
-  background-color: #ed1c24;
+  background-color: #082567;
   padding: 0.5rem;
   border-radius: 2rem;
   width: clamp(10rem, 80vw, 80rem);
@@ -27,15 +27,15 @@
 .contacts section a {
   width: 4rem;
   height: 4rem;
-  border: #8b0000 0.1rem solid;
+  border: #2d68c4 0.1rem solid;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20%;
-  background-color: #ffa07a;
+  background-color: #5f9ea0;
 }
 .contacts section a:hover {
-  background-color: #ed1c24;
+  background-color: #003153;
   color: #ffffff;
 }
 

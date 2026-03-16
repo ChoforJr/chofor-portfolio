@@ -27,7 +27,7 @@
 }
 
 .resumeBtn:hover {
-  background-color: #b52217;
+  background-color: #003153;
   transform: translateY(-2px);
 }
 
@@ -64,7 +64,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #ffa07a;
+  background-color: #5f9ea0;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -75,7 +75,7 @@
 }
 
 .socialLinks a:hover {
-  background-color: #da291c;
+  background-color: #003153;
   box-shadow: 0 4px 12px rgba(218, 41, 28, 0.2);
 }
 

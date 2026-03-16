@@ -15,14 +15,24 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "PostgreSQL", "SQL", "Prisma ORM"],
+    skills: [
+      "EJS",
+      "Node.js",
+      "Express",
+      "Postgresql",
+      "Prisma ORM",
+      "Faker.js",
+      "Passport.js",
+      "Bcrypt.js",
+      "JWT",
+    ],
   },
   {
     title: "Tools & Systems",
     skills: [
       "Git",
       "Github",
-      "Linux / CLI",
+      "Linux",
       "VS Code",
       "Postman",
       "Vercel",

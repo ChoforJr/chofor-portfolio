@@ -1,7 +1,6 @@
 .skills {
   width: clamp(10rem, 80vw, 80rem);
   justify-self: center;
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

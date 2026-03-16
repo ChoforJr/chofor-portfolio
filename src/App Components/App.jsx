@@ -15,6 +15,7 @@ const App = () => {
           </Link>
         </h1>
         <section>
+          <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/skills">Skills</Link>
           <Link to="/contacts">Contacts</Link>
@@ -28,7 +29,7 @@ const App = () => {
         </main>
       </>
       <footer>
-        <p>© {new Date().getFullYear()} — Built with React.js & Vanilla CSS</p>
+        <p>© {new Date().getFullYear()} Chofor</p>
       </footer>
     </div>
   );
