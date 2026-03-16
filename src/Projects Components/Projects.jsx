@@ -175,121 +175,71 @@ const backendProjects = [
   },
 ];
 
+const ProjectCard = ({ project }) => (
+  <article className={styles.projectTab}>
+    <div
+      className={styles.screenshot}
+      style={{ backgroundImage: `url(${project.screenshot})` }}
+    ></div>
+    <div className={styles.projectHead}>
+      <h3>{project.title}</h3>
+      <span className={styles.socialLinks}>
+        <a
+          href={project.code}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Repository"
+        >
+          <img src="/github-color-svgrepo-com.svg" alt="GitHub Logo" />
+        </a>
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Live Demo"
+          >
+            <img src="/open-in-new.svg" alt="External Link Icon" />
+          </a>
+        )}
+      </span>
+    </div>
+    <p>{project.description}</p>
+    <div className={styles.langAndTech}>
+      {project.langAndTech.map((lang) => (
+        <span key={lang}>{lang}</span>
+      ))}
+    </div>
+  </article>
+);
+
 const Projects = () => {
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>
       <section>
+        <hr />
         <h2>Full-Stack Projects</h2>
+        <hr />
         <div className={styles.projectCollection}>
           {fullStackProjects.map((project) => (
-            <article key={project.title} className={styles.projectTab}>
-              <div
-                className={styles.screenshot}
-                style={{
-                  backgroundImage: `url(${project.screenshot})`,
-                }}
-              ></div>
-              <div className={styles.projectHead}>
-                <h3>{project.title}</h3>
-                <span className={styles.socialLinks}>
-                  <a
-                    href={`${project.code}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Repository"
-                  >
-                    <img src="/github-color-svgrepo-com.svg" alt="" />
-                  </a>
-                  <a
-                    href={`${project.demo}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Demo"
-                  >
-                    <img src="/open-in-new.svg" alt="" />
-                  </a>
-                </span>
-              </div>
-              <p>{project.description}</p>
-              <div className={styles.langAndTech}>
-                {project.langAndTech.map((lang) => (
-                  <span key={lang}>{lang}</span>
-                ))}
-              </div>
-            </article>
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
+        <hr />
         <h2>Front-End Projects</h2>
+        <hr />
         <div className={styles.projectCollection}>
           {frontendProjects.map((project) => (
-            <article key={project.title} className={styles.projectTab}>
-              <div
-                className={styles.screenshot}
-                style={{
-                  backgroundImage: `url(${project.screenshot})`,
-                }}
-              ></div>
-              <div className={styles.projectHead}>
-                <h3>{project.title}</h3>
-                <span className={styles.socialLinks}>
-                  <a
-                    href={`${project.code}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Repository"
-                  >
-                    <img src="/github-color-svgrepo-com.svg" alt="" />
-                  </a>
-                  <a
-                    href={`${project.demo}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Demo"
-                  >
-                    <img src="/open-in-new.svg" alt="" />
-                  </a>
-                </span>
-              </div>
-              <p>{project.description}</p>
-              <div className={styles.langAndTech}>
-                {project.langAndTech.map((lang) => (
-                  <span key={lang}>{lang}</span>
-                ))}
-              </div>
-            </article>
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
+        <hr />
         <h2>Back-End Projects</h2>
+        <hr />
         <div className={styles.projectCollection}>
           {backendProjects.map((project) => (
-            <article key={project.title} className={styles.projectTab}>
-              <div
-                className={styles.screenshot}
-                style={{
-                  backgroundImage: `url(${project.screenshot})`,
-                }}
-              ></div>
-              <div className={styles.projectHead}>
-                <h3>{project.title}</h3>
-                <span className={styles.socialLinks}>
-                  <a
-                    href={`${project.code}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Repository"
-                  >
-                    <img src="/github-color-svgrepo-com.svg" alt="" />
-                  </a>
-                </span>
-              </div>
-              <p>{project.description}</p>
-              <div className={styles.langAndTech}>
-                {project.langAndTech.map((lang) => (
-                  <span key={lang}>{lang}</span>
-                ))}
-              </div>
-            </article>
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
       </section>
