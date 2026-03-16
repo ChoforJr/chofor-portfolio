@@ -10,6 +10,12 @@
   gap: 2rem;
 }
 
+.resumeBtns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 .resumeBtn {
   display: flex;
   align-items: center;

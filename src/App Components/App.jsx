@@ -10,15 +10,27 @@ const App = () => {
     <div className="container">
       <nav>
         <h1>
-          <Link to="/">
+          <Link to="/" className="navHeader">
             Chofor's <span style={{ color: "#DA291C" }}>Portfolio</span>
           </Link>
         </h1>
+
         <section>
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/contacts">Contacts</Link>
+          <input type="checkbox" id="sidebar-active" />
+          <label htmlFor="sidebar-active" className="open-sidebar-button">
+            <img src="/menu.svg" alt="menu icon" />
+          </label>
+          <label id="overlay" htmlFor="sidebar-active"></label>
+
+          <div className="links-container">
+            <label htmlFor="sidebar-active" className="close-sidebar-button">
+              <img src="close.svg" alt="close icon" />
+            </label>
+            <Link to="/">Home</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/skills">Skills</Link>
+            <Link to="/contacts">Contacts</Link>
+          </div>
         </section>
       </nav>
       <>

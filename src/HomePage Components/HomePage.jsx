@@ -4,15 +4,35 @@ import { FileText } from "lucide-react";
 const HomePage = () => {
   return (
     <main className={styles.homePage}>
-      <a
-        href="/Resume (30-Jun-2023).pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.resumeBtn}
-      >
-        <FileText size={20} />
-        <span>Resume</span>
-      </a>
+      <div className={styles.resumeBtns}>
+        <a
+          href="/resumes/Resume (30-Jun-2023).pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeBtn}
+        >
+          <FileText size={20} />
+          <span>Full-Stack Resume</span>
+        </a>
+        <a
+          href="/resumes/Resume (30-Jun-2023).pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeBtn}
+        >
+          <FileText size={20} />
+          <span>Front-End Resume</span>
+        </a>
+        <a
+          href="/resumes/Resume (30-Jun-2023).pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeBtn}
+        >
+          <FileText size={20} />
+          <span>Back-End Resume</span>
+        </a>
+      </div>
 
       <h1>
         Hello, I'm <span className={styles.highlight}>Chofor Forsakang</span>

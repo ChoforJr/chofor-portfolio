@@ -40,14 +40,9 @@
 }
 
 .contacts h1 {
-  font-size: 6rem;
+  font-size: clamp(3rem, 6vw, 6rem);
   margin-bottom: -1rem;
   font-weight: bold;
-}
-@media (max-width: 600px) {
-  .contacts h1 {
-    font-size: 3rem;
-  }
 }
 .contacts p {
   width: clamp(6rem, 60vw, 60rem);
