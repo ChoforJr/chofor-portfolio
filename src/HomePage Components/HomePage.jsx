@@ -6,7 +6,7 @@ const HomePage = () => {
     <main className={styles.homePage}>
       <div className={styles.resumeBtns}>
         <a
-          href="/resumes/Resume (30-Jun-2023).pdf"
+          href="/resumes/Full-Stack Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeBtn}
@@ -15,7 +15,7 @@ const HomePage = () => {
           <span>Full-Stack Resume</span>
         </a>
         <a
-          href="/resumes/Resume (30-Jun-2023).pdf"
+          href="/resumes/Front-End Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeBtn}
@@ -24,7 +24,7 @@ const HomePage = () => {
           <span>Front-End Resume</span>
         </a>
         <a
-          href="/resumes/Resume (30-Jun-2023).pdf"
+          href="/resumes/Back-End Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeBtn}
