@@ -1,11 +1,14 @@
 import "./App.css";
-
-import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import { ItemContext } from "../ItemContext";
-// import { useAppLogic } from "./UseAppLogic";
 
 const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const closeSidebar = () => setIsSidebarOpen(false);
+
   return (
     <div className="container">
       <nav>
@@ -16,30 +19,46 @@ const App = () => {
         </h1>
 
         <section>
-          <input type="checkbox" id="sidebar-active" />
-          <label htmlFor="sidebar-active" className="open-sidebar-button">
+          <button
+            className="open-sidebar-button"
+            onClick={toggleSidebar}
+            aria-label="Open menu"
+          >
             <img src="/menu.svg" alt="menu icon" />
-          </label>
-          <label id="overlay" htmlFor="sidebar-active"></label>
+          </button>
 
-          <div className="links-container">
-            <label htmlFor="sidebar-active" className="close-sidebar-button">
+          {isSidebarOpen && <div id="overlay" onClick={closeSidebar}></div>}
+
+          <div className={`links-container ${isSidebarOpen ? "active" : ""}`}>
+            <button
+              className="close-sidebar-button"
+              onClick={closeSidebar}
+              aria-label="Close menu"
+            >
               <img src="close.svg" alt="close icon" />
-            </label>
-            <Link to="/">Home</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/skills">Skills</Link>
-            <Link to="/contacts">Contacts</Link>
+            </button>
+            <Link to="/" onClick={closeSidebar}>
+              Home
+            </Link>
+            <Link to="/projects" onClick={closeSidebar}>
+              Projects
+            </Link>
+            <Link to="/skills" onClick={closeSidebar}>
+              Skills
+            </Link>
+            <Link to="/contacts" onClick={closeSidebar}>
+              Contacts
+            </Link>
           </div>
         </section>
       </nav>
-      <>
-        <main>
-          <ItemContext.Provider value={null}>
-            <Outlet />
-          </ItemContext.Provider>
-        </main>
-      </>
+
+      <main>
+        <ItemContext.Provider value={null}>
+          <Outlet />
+        </ItemContext.Provider>
+      </main>
+
       <footer>
         <p>© {new Date().getFullYear()} Chofor</p>
       </footer>

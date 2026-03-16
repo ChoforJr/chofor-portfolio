@@ -1,5 +1,5 @@
 .homePage {
-  max-width: 60rem;
+  max-width: 80rem;
   margin: 0 auto;
   padding: 4rem 1rem;
   display: flex;
@@ -23,7 +23,7 @@
   background-color: #da291c;
   color: #ffffff;
   padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: bold;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -38,9 +38,12 @@
 }
 
 .homePage h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(3.5rem, 5vw, 5.5rem);
   margin: 0;
   color: #1f2937;
+}
+.homePage p {
+  font-size: 2rem;
 }
 
 .highlight {
@@ -64,8 +67,8 @@
 }
 
 .socialLinks a {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +79,7 @@
 }
 
 .socialLinks a img {
-  width: 1.75rem;
+  width: 3rem;
   transition: transform 0.3s ease;
 }
 
