@@ -40,15 +40,7 @@ const fullStackProjects = [
   {
     title: "Where is Waldo",
     description: "Test your observation skills and compete on the leaderboard!",
-    langAndTech: [
-      "React",
-      "CSS",
-      "Express",
-      "Prisma ORM",
-      "Passport.js",
-      "Bcrypt.js",
-      "JWT",
-    ],
+    langAndTech: ["React", "CSS", "Express", "Prisma ORM"],
     code: "https://github.com/ChoforJr/where-is-waldo",
     demo: "https://where-is-waldo-ebon.vercel.app/",
     screenshot: "/projects/where-is-waldo.jpeg",
