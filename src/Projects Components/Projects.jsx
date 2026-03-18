@@ -6,6 +6,7 @@ const fullStackProjects = [
     description: "A social media app that connects to a RESTAPI backend.",
     langAndTech: [
       "React",
+      "JavaScript",
       "CSS",
       "Express",
       "Prisma ORM",
@@ -25,6 +26,7 @@ const fullStackProjects = [
       "A messaging app for individual and group conversations, using the messaging app api as backend.",
     langAndTech: [
       "React",
+      "JavaScript",
       "CSS",
       "Express",
       "Prisma ORM",
@@ -40,7 +42,7 @@ const fullStackProjects = [
   {
     title: "Where is Waldo",
     description: "Test your observation skills and compete on the leaderboard!",
-    langAndTech: ["React", "CSS", "Express", "Prisma ORM"],
+    langAndTech: ["React", "JavaScript", "CSS", "Express", "Prisma ORM"],
     code: "https://github.com/ChoforJr/where-is-waldo",
     demo: "https://where-is-waldo-ebon.vercel.app/",
     screenshot: "/projects/where-is-waldo.jpeg",
@@ -51,6 +53,7 @@ const fullStackProjects = [
       "This application allows users to browse and read blog posts in a user-friendly interface.",
     langAndTech: [
       "React",
+      "JavaScript",
       "CSS",
       "Express",
       "Prisma ORM",
@@ -74,6 +77,7 @@ const frontendProjects = [
       "lucide-react",
       "react-router-dom",
       "Vitest",
+      "JavaScript",
       "HTML",
       "CSS",
     ],
@@ -84,7 +88,7 @@ const frontendProjects = [
   {
     title: "Memory Card",
     description: "Test your memory by matching anime character cards!",
-    langAndTech: ["React", "HTML", "CSS"],
+    langAndTech: ["React", "JavaScript", "HTML", "CSS"],
     code: "https://github.com/ChoforJr/Memory-Card",
     demo: "https://memory-card-flame-sigma.vercel.app/",
     screenshot: "/projects/memory-card.jpeg",
@@ -93,7 +97,7 @@ const frontendProjects = [
     title: "CV Application",
     description:
       "A dynamic, interactive CV builder application that allows users to create, edit, and preview professional CVs in real-time.",
-    langAndTech: ["React", "HTML", "CSS"],
+    langAndTech: ["React", "JavaScript", "HTML", "CSS"],
     code: "https://github.com/ChoforJr/CV-Application",
     demo: "https://cv-application-pi-lemon.vercel.app/",
     screenshot: "/projects/cv-application.jpeg",
