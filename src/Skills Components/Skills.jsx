@@ -16,7 +16,7 @@ const skillCategories = [
   {
     title: "Backend",
     skills: [
-      "EJS",
+      "Embedded JavaScript(EJS)",
       "Node.js",
       "Express",
       "Postgresql",
