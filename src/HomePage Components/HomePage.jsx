@@ -6,7 +6,7 @@ const HomePage = () => {
     <main className={styles.homePage}>
       <div className={styles.resumeBtns}>
         <a
-          href="/resumes/Full-Stack Resume.pdf"
+          href="/resumes/Full-Stack Resume - Chofor Forsakang.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeBtn}
