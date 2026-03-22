@@ -15,7 +15,7 @@ const HomePage = () => {
           <span>Full-Stack Resume</span>
         </a>
         <a
-          href="/resumes/Front-End Resume.pdf"
+          href="/resumes/Front-End Resume - Chofor Forsakang.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeBtn}
