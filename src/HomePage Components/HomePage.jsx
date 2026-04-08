@@ -1,73 +1,111 @@
-import styles from "./homePage.module.css";
 import { FileText } from "lucide-react";
+import { Link } from "react-router-dom";
+import styles from "./homePage.module.css";
 
 const HomePage = () => {
   return (
-    <main className={styles.homePage}>
-      <div className={styles.resumeBtns}>
-        <a
-          href="/resumes/Full-Stack Resume - Chofor Forsakang.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.resumeBtn}
-        >
-          <FileText size={20} />
-          <span>Full-Stack Resume</span>
-        </a>
-        <a
-          href="/resumes/Front-End Resume - Chofor Forsakang.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.resumeBtn}
-        >
-          <FileText size={20} />
-          <span>Front-End Resume</span>
-        </a>
-        <a
-          href="/resumes/Back-End Resume - Chofor Forsakang.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.resumeBtn}
-        >
-          <FileText size={20} />
-          <span>Back-End Resume</span>
-        </a>
-      </div>
+    <div className={styles.homePage}>
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <p className={styles.heroLabel}>Hi there, I’m</p>
+          <h1>Chofor Forsakang</h1>
+          <p className={styles.heroText}>
+            I build polished, high-performance web applications with React,
+            Node.js, and PostgreSQL. I help businesses launch responsive digital
+            products that feel fast and intuitive.
+          </p>
 
-      <h1>
-        Hello, I'm <span className={styles.highlight}>Chofor Forsakang</span>
-      </h1>
+          <div className={styles.heroActions}>
+            <a
+              href="/resumes/Full-Stack Resume - Chofor Forsakang_V3.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.primaryButton}
+            >
+              <FileText size={20} />
+              Download Resume
+            </a>
+            <Link to="/about" className={styles.secondaryButton}>
+              About Me
+            </Link>
+          </div>
 
-      <p className={styles.bio}>
-        As a Full-Stack Developer, I build responsive front-end interfaces using
-        HTML, CSS, JavaScript, and React.js, translating mockups into seamless
-        user experiences. On the back-end, I architect robust database queries
-        and APIs using Node.js, Express.js, and PostgreSQL to power dynamic
-        applications.
-      </p>
+          <div className={styles.socialLinks}>
+            <a
+              href="https://github.com/ChoforJr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+            >
+              <img src="/github-color-svgrepo-com.svg" alt="GitHub" />
+            </a>
+            <a
+              href="https://linkedin.com/in/choforforsakang"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              <img src="/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="mailto:choforjrforsakang@gmail.com" aria-label="Email">
+              <img src="/mail.svg" alt="Email" />
+            </a>
+          </div>
+        </div>
 
-      <section className={styles.socialLinks}>
-        <a
-          href="https://github.com/ChoforJr"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub Profile"
-        >
-          <img src="/github-color-svgrepo-com.svg" alt="" />
-        </a>
-        <a
-          href="https://linkedin.com/in/choforforsakang"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn Profile"
-        >
-          <img src="/linkedin.svg" alt="" />
-        </a>
-        <a href="mailto:choforjrforsakang@gmail.com" aria-label="Email Me">
-          <img src="/mail.svg" alt="" />
-        </a>
+        <div className={styles.heroPanel}>
+          <div className={styles.panelHeader}>
+            <span>Featured</span>
+            <p>Full-stack developer</p>
+          </div>
+          <h2>React + Node.js</h2>
+          <p>
+            Building modern applications with clean UI, secure backend services,
+            and fast database workflows.
+          </p>
+
+          <div className={styles.techList}>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>Express</span>
+          </div>
+        </div>
       </section>
-    </main>
+
+      <section className={styles.servicesSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionLabel}>What I do</p>
+          <h2>Designing and delivering complete web products</h2>
+        </div>
+
+        <div className={styles.serviceGrid}>
+          <article className={styles.serviceCard}>
+            <h3>Frontend</h3>
+            <p>
+              Craft modern React interfaces, responsive layouts, and polished
+              animations for fast user experiences.
+            </p>
+          </article>
+
+          <article className={styles.serviceCard}>
+            <h3>Backend</h3>
+            <p>
+              Build APIs, authentication, and database systems using Node,
+              Express, and PostgreSQL.
+            </p>
+          </article>
+
+          <article className={styles.serviceCard}>
+            <h3>Deployment</h3>
+            <p>
+              Deploy web apps with reliable hosting, performance monitoring, and
+              scalable configuration.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
   );
 };
 

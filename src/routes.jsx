@@ -1,5 +1,6 @@
 import App from "./App Components/App";
 import HomePage from "./HomePage Components/HomePage";
+import About from "./About Components/About";
 import Contacts from "./Contacts Components/Contacts";
 import Projects from "./Projects Components/Projects";
 import Skills from "./Skills Components/Skills";
@@ -16,6 +17,7 @@ const routes = [
         index: true,
         element: <HomePage />,
       },
+      { path: "about", element: <About /> },
       { path: "projects", element: <Projects /> },
       { path: "skills", element: <Skills /> },
       { path: "contacts", element: <Contacts /> },
