@@ -1,25 +1,30 @@
 import "./App.css";
-import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { useState, useEffect } from "react"; // 1. Added useEffect
+import { Link, Outlet, useLocation } from "react-router-dom"; // 2. Added useLocation
 
 const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Projects", to: "/projects" },
   { label: "Skills", to: "/skills" },
-  { label: "Contact", to: "/contacts" },
+  { label: "Contacts", to: "/contacts" },
 ];
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const location = useLocation();
 
   const toggleSidebar = () => setIsSidebarOpen((value) => !value);
   const closeSidebar = () => setIsSidebarOpen(false);
 
+  useEffect(() => {
+    closeSidebar();
+  }, [location]);
+
   return (
     <div className="container">
       <nav className="siteNav">
-        <Link to="/" className="logo" onClick={closeSidebar}>
+        <Link to="/" className="logo">
           <div className="brand">
             <span>Chofor</span>
             <strong>Portfolio</strong>
@@ -46,7 +51,7 @@ const App = () => {
             <img src="/close.svg" alt="Close menu" />
           </button>
           {navItems.map((item) => (
-            <Link key={item.to} to={item.to} onClick={closeSidebar}>
+            <Link key={item.to} to={item.to}>
               {item.label}
             </Link>
           ))}
