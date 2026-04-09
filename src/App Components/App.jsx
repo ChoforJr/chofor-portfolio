@@ -40,8 +40,6 @@ const App = () => {
           <img src="/menu.svg" alt="Menu" />
         </button>
 
-        {isSidebarOpen && <div id="overlay" onClick={closeSidebar}></div>}
-
         <div className={`links-container ${isSidebarOpen ? "active" : ""}`}>
           <button
             className="close-sidebar-button"
@@ -57,6 +55,7 @@ const App = () => {
           ))}
         </div>
       </nav>
+      {isSidebarOpen && <div id="overlay" onClick={closeSidebar}></div>}
 
       <main className="pageContent">
         <Outlet />
