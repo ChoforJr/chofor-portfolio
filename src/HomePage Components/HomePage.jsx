@@ -17,7 +17,7 @@ const HomePage = () => {
 
           <div className={styles.heroActions}>
             <a
-              href="/resumes/Full-Stack Resume - Chofor Forsakang_V4.pdf"
+              href="/resumes/Full-Stack Resume - Chofor Forsakang_V5.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.primaryButton}
