@@ -61,11 +61,6 @@
     border-color 0.25s ease;
 }
 
-.projectCard:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
-}
-
 .screenshotLink {
   position: relative;
   display: block;
@@ -80,10 +75,6 @@
   object-fit: cover;
   object-position: top center;
   transition: transform 0.55s ease;
-}
-
-.screenshotLink:hover .screenshot {
-  transform: scale(1.04);
 }
 
 .projectNumber,
@@ -168,9 +159,10 @@
 
 .projectDescription {
   max-width: 56rem;
-  color: var(--muted);
-  font-size: 1.45rem;
+  color: var(--text);
+  font-size: 1.5rem;
   line-height: 1.8;
+  overflow-wrap: anywhere;
 }
 
 .technologyList {
@@ -189,12 +181,46 @@
   font-size: 1.05rem;
 }
 
-@media (max-width: 760px) {
+@media (hover: hover) and (pointer: fine) {
+  .projectCard {
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .projectCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+  }
+
+  .screenshotLink:hover .screenshot {
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 900px) {
   .projectCollection {
     grid-template-columns: 1fr;
   }
 
   .screenshotLink {
     aspect-ratio: 1.75;
+  }
+}
+
+@media (max-width: 760px) {
+  .projectBody {
+    gap: 1.3rem;
+    padding: 1.8rem;
+  }
+
+  .projectDescription {
+    font-size: 1.55rem;
+    line-height: 1.75;
+  }
+
+  .projectNumber,
+  .previewLink {
+    backdrop-filter: none;
   }
 }
