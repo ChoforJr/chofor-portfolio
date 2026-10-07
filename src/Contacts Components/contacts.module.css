@@ -38,8 +38,8 @@
 
 .contactForm,
 .contactCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 2rem;
   padding: 2.4rem;
 }
@@ -61,8 +61,8 @@
   width: 100%;
   padding: 1.2rem 1.4rem;
   border-radius: 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  background: var(--bg);
   color: var(--text);
   outline: none;
   resize: vertical;
@@ -70,7 +70,7 @@
 
 .contactForm input::placeholder,
 .contactForm textarea::placeholder {
-  color: rgba(228, 233, 240, 0.6);
+  color: var(--muted);
 }
 
 .contactForm button {
@@ -89,7 +89,7 @@
 
 .contactForm button:hover {
   transform: translateY(-2px);
-  background: #c41f1f;
+  background: var(--accent);
 }
 
 .contactCard h2 {
@@ -116,13 +116,13 @@
   align-items: center;
   padding: 1.2rem 1.4rem;
   border-radius: 1.4rem;
-  background: rgba(95, 158, 160, 0.1);
+  background: var(--accent-soft);
   color: var(--text);
-  border: 1px solid rgba(95, 158, 160, 0.2);
+  border: 1px solid var(--border);
 }
 
 .linksGrid a:hover {
-  background: rgba(95, 158, 160, 0.2);
+  background: var(--surface-raised);
 }
 
 .linksGrid img {

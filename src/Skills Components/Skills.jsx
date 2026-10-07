@@ -2,7 +2,7 @@ import styles from "./skills.module.css";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Tools & technologies",
     skills: [
       {
         name: "HTML5",
@@ -20,10 +20,10 @@ const skillCategories = [
         name: "React",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
-      // {
-      //   name: "TypeScript",
-      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      // },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
       {
         name: "Vitest",
         icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjMDAwMDAwIiBzdHlsZT0ib3BhY2l0eToxOyI+PHBhdGggIGQ9Ik0xMy43NCAxLjA1M2EuNS41IDAgMCAwLS4xNTcuMDI1YS41LjUgMCAwIDAtLjI1LjE4OEw3LjU5NSA5LjU2MmEuNS41IDAgMCAwLS4wODQuMjIzYS41LjUgMCAwIDAgLjAzMi4yMzZhLjUuNSAwIDAgMCAuMTQuMTkzYS41LjUgMCAwIDAgLjIxNS4xMDVsMy43MDcuNzg2bC0uMjMgNC41OGEuNS41IDAgMCAwIC4wODUuM2EuNS41IDAgMCAwIC4yNS4xODlhLjUuNSAwIDAgMCAuMzEzIDBhLjUuNSAwIDAgMCAuMjUtLjE4N2w1LjczOC04LjI5NmEuNS41IDAgMCAwIC4wODQtLjIyM2EuNS41IDAgMCAwLS4wMzItLjIzNmEuNS41IDAgMCAwLS4xNC0uMTk0YS41LjUgMCAwIDAtLjIxNS0uMTA0bC0zLjcwNy0uNzg3bC4yMy00LjU4YS41LjUgMCAwIDAtLjA4NS0uM2EuNS41IDAgMCAwLS4yNS0uMTg4YS41LjUgMCAwIDAtLjE1Ni0uMDI2TTEuMTU3IDkuNzg4Yy0uMzA3LjAwMS0uNi4xMjQtLjgxNy4zNGExLjE2IDEuMTYgMCAwIDAtLjM0LjgxN2ExLjE2IDEuMTYgMCAwIDAgLjMzNC44MmwxMC44NDIgMTAuODQyYTEuMiAxLjIgMCAwIDAgLjM3Ny4yNTJhMS4yIDEuMiAwIDAgMCAuNDQ1LjA4OGguMDA0YTEuMiAxLjIgMCAwIDAgLjQ0NS0uMDg4YTEuMiAxLjIgMCAwIDAgLjM3Ny0uMjUybDEwLjg0Mi0xMC44NDNhMS4xNiAxLjE2IDAgMCAwIC4zMzQtLjgyYTEuMTYgMS4xNiAwIDAgMC0uMzQtLjgxNmExLjE2IDEuMTYgMCAwIDAtLjgxNy0uMzRhMS4xNiAxLjE2IDAgMCAwLS44Mi4zMzRsLTUuNCA1LjRsLS4wMjYuMDJMMTIgMjAuMTRsLTQuNTk4LTQuNTk3bC0uMDI0LS4wMmwtNS40MDEtNS40MDFhMS4xNiAxLjE2IDAgMCAwLS44Mi0uMzM0Ii8+PC9zdmc+",
@@ -36,11 +36,6 @@ const skillCategories = [
         name: "Lucide-React",
         icon: "https://lucide.dev/favicon.ico",
       },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
       {
         name: "Node.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -69,15 +64,11 @@ const skillCategories = [
         name: "Bcrypt",
         icon: "/data-protection.png",
       },
-      // {
-      //   name: "Socket.io",
-      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-      // },
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
+      {
+        name: "Socket.io",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+      },
+
       {
         name: "Git",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",

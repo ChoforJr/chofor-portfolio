@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { projects } from "../data/projects";
 import styles from "./about.module.css";
 
 const About = () => {
@@ -6,12 +7,12 @@ const About = () => {
     <div className={styles.aboutPage}>
       <header className={styles.header}>
         <p className={styles.sectionLabel}>About</p>
-        <h1>Crafting clean, scalable web applications with a human touch</h1>
+        <h1>Thoughtful interfaces. Useful products. Solid foundations.</h1>
         <p className={styles.intro}>
-          I am a full-stack developer who builds thoughtful digital products
-          using React, Node.js, Express, and PostgreSQL. My focus is on
-          delivering fast, accessible experiences that feel polished and easy to
-          use.
+          I’m a full-stack developer who enjoys building web products from the
+          interface through to the systems behind it. I work with React,
+          JavaScript, Node.js, and PostgreSQL to turn ideas into clear,
+          responsive experiences.
         </p>
       </header>
 
@@ -19,15 +20,15 @@ const About = () => {
         <div className={styles.bioCard}>
           <h2>My story</h2>
           <p>
-            I enjoy turning ideas into functioning applications. I collaborate
-            with teams to translate product goals into real interfaces, APIs,
-            and data workflows. I also enjoy solving problems across the full
-            stack, from clean UI layout to backend reliability.
+            I like taking a product from a rough idea to something people can
+            actually use. That means thinking through the interface, connecting
+            it to dependable application logic, and paying attention to the
+            details that make a project feel complete.
           </p>
           <p>
-            When I’m not writing code, I’m refining my projects, learning new
-            technologies, and looking for ways to simplify complex user
-            journeys.
+            My projects span social platforms, messaging, interactive games,
+            and publishing. I’m always refining my approach and looking for
+            simpler, more thoughtful ways to solve real user problems.
           </p>
         </div>
 
@@ -43,12 +44,12 @@ const About = () => {
 
           <div className={styles.quickStats}>
             <div>
-              <span>8+</span>
-              <p>Applications delivered</p>
+              <span>{projects.length}</span>
+              <p>Featured projects</p>
             </div>
             <div>
-              <span>React / Node</span>
-              <p>Stack expertise</p>
+              <span>React + Node.js</span>
+              <p>Core technologies</p>
             </div>
             <div>
               <span>Responsive</span>

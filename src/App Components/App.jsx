@@ -1,61 +1,83 @@
+import { useEffect, useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import "./App.css";
-import { useState, useEffect } from "react"; // 1. Added useEffect
-import { Link, Outlet, useLocation } from "react-router-dom"; // 2. Added useLocation
 
 const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Projects", to: "/projects" },
   { label: "Skills", to: "/skills" },
-  { label: "Contacts", to: "/contacts" },
 ];
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
 
-  const toggleSidebar = () => setIsSidebarOpen((value) => !value);
-  const closeSidebar = () => setIsSidebarOpen(false);
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [location]);
 
   useEffect(() => {
-    closeSidebar();
-  }, [location]);
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setIsSidebarOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
 
   return (
     <div className="container">
-      <nav className="siteNav">
-        <Link to="/" className="logo">
-          <div className="brand">
-            <span>Chofor</span>
-            <strong>Portfolio</strong>
-          </div>
+      <nav className="siteNav" aria-label="Main navigation">
+        <Link to="/" className="logo" aria-label="Chofor Forsakang, home">
+          <span className="brandMark" aria-hidden="true">
+            cf
+          </span>
+          <span className="brandName">
+            Chofor<span>.</span>
+          </span>
         </Link>
 
         <button
-          className="open-sidebar-button"
-          onClick={toggleSidebar}
-          aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
+          className="menuToggle"
+          onClick={() => setIsSidebarOpen((value) => !value)}
+          aria-label={isSidebarOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isSidebarOpen}
+          aria-controls="primary-navigation"
         >
-          <img src="/menu.svg" alt="Menu" />
+          {isSidebarOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
 
-        <div className={`links-container ${isSidebarOpen ? "active" : ""}`}>
-          <button
-            className="close-sidebar-button"
-            onClick={closeSidebar}
-            aria-label="Close menu"
-          >
-            <img src="/close.svg" alt="Close menu" />
-          </button>
+        <div
+          className={`linksContainer ${isSidebarOpen ? "isOpen" : ""}`}
+          id="primary-navigation"
+        >
           {navItems.map((item) => (
-            <Link key={item.to} to={item.to}>
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) =>
+                `navLink${isActive ? " isActive" : ""}`
+              }
+            >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
+          <NavLink to="/contacts" className="navContact">
+            Let’s talk <ArrowUpRight size={15} aria-hidden="true" />
+          </NavLink>
         </div>
       </nav>
-      {isSidebarOpen && <div id="overlay" onClick={closeSidebar}></div>}
+
+      {isSidebarOpen && (
+        <button
+          className="navigationOverlay"
+          onClick={() => setIsSidebarOpen(false)}
+          aria-label="Close navigation menu"
+        />
+      )}
 
       <main className="pageContent">
         <Outlet />
@@ -63,6 +85,9 @@ const App = () => {
 
       <footer className="siteFooter">
         <p>© {new Date().getFullYear()} Chofor Forsakang</p>
+        <a href="mailto:choforjrforsakang@gmail.com">
+          Say hello <ArrowUpRight size={14} aria-hidden="true" />
+        </a>
       </footer>
     </div>
   );
