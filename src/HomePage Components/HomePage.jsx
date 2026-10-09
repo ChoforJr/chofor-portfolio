@@ -26,7 +26,7 @@ const HomePage = () => {
           <h1 id="hero-title">
             I build
             <br />
-            <span>Web Applications</span>
+            <span>Software</span>
             <br />
             that feel good
             <br />
