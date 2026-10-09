@@ -26,7 +26,7 @@ const HomePage = () => {
           <h1 id="hero-title">
             I build
             <br />
-            <span>web things</span>
+            <span>Web Applications</span>
             <br />
             that feel good
             <br />
@@ -71,13 +71,21 @@ const HomePage = () => {
             >
               <Linkedin size={19} aria-hidden="true" />
             </a>
-            <a href="mailto:choforjrforsakang@gmail.com" aria-label="Email Chofor">
+            <a
+              href="mailto:choforjrforsakang@gmail.com"
+              aria-label="Email Chofor"
+            >
               <Mail size={19} aria-hidden="true" />
             </a>
           </div>
         </div>
 
-        <a className={styles.featuredProject} href={featuredProjects[0].demo} target="_blank" rel="noopener noreferrer">
+        <a
+          className={styles.featuredProject}
+          href={featuredProjects[0].demo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={featuredProjects[0].screenshot}
             alt={featuredProjects[0].imageAlt}
@@ -112,7 +120,9 @@ const HomePage = () => {
         <div className={styles.sectionHeading}>
           <div>
             <p className={styles.sectionLabel}>A few things I’ve made</p>
-            <h2>Selected work<span>.</span></h2>
+            <h2>
+              Selected work<span>.</span>
+            </h2>
           </div>
           <Link to="/projects" className={styles.textLink}>
             All projects <ArrowUpRight size={17} aria-hidden="true" />
