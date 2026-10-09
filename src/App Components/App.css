@@ -26,15 +26,18 @@
 }
 
 html {
+  max-width: 100%;
   font-size: 62.5%;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
 }
 
 body {
-  min-width: 32rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 100vh;
-  overflow-x: hidden;
   background:
     radial-gradient(ellipse at 50% -24rem, rgba(217, 255, 112, 0.085), transparent 63rem),
     var(--bg);
@@ -77,6 +80,8 @@ a {
 }
 
 .container {
+  width: 100%;
+  min-width: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -193,6 +198,7 @@ a {
 
 .pageContent {
   width: min(124rem, calc(100% - 5rem));
+  min-width: 0;
   margin: 0 auto;
   padding: 2rem 0 5rem;
   flex: 1;
@@ -200,6 +206,7 @@ a {
 
 .siteFooter {
   width: min(124rem, calc(100% - 5rem));
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -242,24 +249,27 @@ a {
     z-index: 21;
     top: 0;
     right: 0;
-    width: min(34rem, 86vw);
+    width: 0;
     height: 100dvh;
     align-items: stretch;
     flex-direction: column;
     gap: 0.8rem;
-    padding: 9rem 2.5rem 3rem;
+    overflow: hidden;
+    padding: 9rem 0 3rem;
     border-left: 1px solid var(--border);
     background: var(--bg);
     box-shadow: -2rem 0 6rem rgba(0, 0, 0, 0.32);
-    transform: translateX(105%);
     visibility: hidden;
     transition:
-      transform 0.25s ease,
+      width 0.25s ease,
+      padding 0.25s ease,
       visibility 0.25s ease;
   }
 
   .linksContainer.isOpen {
-    transform: translateX(0);
+    width: min(34rem, 86vw);
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
     visibility: visible;
   }
 
